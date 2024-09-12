@@ -7,13 +7,20 @@ export interface Friend {
 export interface Colleague {
     name: string;
     department: string;
-    contact: {
-      email: string;
-      extension: number
-    } 
+    contact: Contact
   }
+
+export interface Contact  {
+    email: string;
+    extension: number
+}
 
 export interface ColleagueHistory {
   current: Colleague[],
   former: Colleague[]
+}
+
+export interface EmailContact {
+    name: string
+    email: string
 }
